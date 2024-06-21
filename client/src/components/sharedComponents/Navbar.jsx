@@ -1,9 +1,14 @@
 // Importing required modules
-import React, { useState } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // Importing MUI assets
-import { Box, AppBar, Toolbar, Tooltip, IconButton, Icon } from "@mui/material";
+import { Box, AppBar, Toolbar, Tooltip, IconButton } from "@mui/material";
+
+// Importing custom components
+const SearchBox = lazy(() => import("../dialogComponents/SearchBox"));
+const Notifications = lazy(() => import("../dialogComponents/Notifications"));
+const CreateGroup = lazy(() => import("../dialogComponents/CreateGroup"));
 
 // Importing react-icons
 import { BiMenu, BiGroup, BiLogOut, BiSearchAlt, BiPlusCircle, BiDotsVerticalRounded, BiUserCircle, BiBell } from "react-icons/bi";
@@ -15,7 +20,10 @@ const Navbar = () => {
     const navigate = useNavigate();
 
     // Some states to be utilised in handler functions
-    const [isMobile, setIsMobile] = useState(false);
+    const [ isMobile, setIsMobile ] = useState(false);
+    const [ isSearch, setIsSearch ] = useState(false);
+    const [ isNotification, setIsNotification ] = useState(false);
+    const [ isCreateGroup, setIsCreateGroup ] = useState(false);
 
     // Function to handle the display of Sidebar/Drawer in mobile screens
     const handleMobileSideDrawer = (e) => {
@@ -24,16 +32,18 @@ const Navbar = () => {
 
     // Function to handle the opening of Search Box
     const openSearchBox = (e) => {
+        setIsSearch(true);
 
     }
 
     // Function to handle the opening of Notifications
     const openNotificationBox = (e) => {
-
+        setIsNotification(true);
     }
 
     // Function to handle the opening of Create new Group Box
     const openCreateNewGroupBox = (e) => {
+        setIsCreateGroup(true);
     }
 
     // Function to handle navigation to Manage groups page
@@ -79,7 +89,7 @@ const Navbar = () => {
                             <IconBtn title={"Logout"} icon={<BiLogOut className="text-teal-100 rotate-180" />} eventListener={handleLogout} />
                         </Box>
                         <Box sx={{ display: { xs: "block", sm: "none" } }} className="dropdown dropdown-end">
-                            <div className="btn border-0">
+                            <div className="border-0">
                                 <IconBtn title={"Open Menu"} icon={<BiDotsVerticalRounded className="text-gray-400" />} />
                             </div>
                             <Box className="dropdown-content z-49 menu p-2 shadow bg-gray-900 rounded-md w-44">
@@ -94,6 +104,30 @@ const Navbar = () => {
                     </Toolbar>
                 </AppBar>
             </Box>
+
+
+            {/* Load the below components only when they are needed otherwise not */}
+
+            {/* If the Search is selected then show Search box */}
+            { isSearch && (
+                <Suspense fallback={<div>Loading...</div>} >
+                    <SearchBox />
+                </Suspense>
+            ) }
+
+            {/* If the Notification is selected then show Notifications box */}
+            { isNotification && (
+                <Suspense fallback={<div>Loading...</div>} >
+                    <Notifications />
+                </Suspense>
+            ) }
+
+            {/* If the CreateGroup is selected then show Create Group box */}
+            { isCreateGroup && (
+                <Suspense fallback={<div>Loading...</div>} >
+                    <CreateGroup />
+                </Suspense>
+            ) }
         </>
     );
 };
