@@ -1,5 +1,6 @@
 // Importing required modules
 import React from "react";
+import { useParams } from "react-router-dom";
 
 // Importing MUI assets
 import { Grid } from "@mui/material";
@@ -7,11 +8,19 @@ import { Grid } from "@mui/material";
 // Importing our custom component
 import Navbar from "../sharedComponents/Navbar";
 import WebTitle from "../sharedComponents/WebTitle";
+import ChatList from "../dialogComponents/ChatList";
+
+import { sampleChatData } from "../sharedComponents/sampleChatData.js";
 
 // Create the AppLayout component (Higher Order component)
 const AppLayout = () => WrappedComponent => {
+
     // JSX to render the component
     return (props) => {
+        // Initializing the react hooks
+        const params = useParams();
+        // Some varibales to handle props for childrens
+        const chatId = params.chatId;
         return (
             <>
                 <WebTitle />
@@ -30,7 +39,7 @@ const AppLayout = () => WrappedComponent => {
                         }}
                         height={"100%"}
                         className="bg-gray-900 text-gray-300 border-r border-gray-600" >
-                        First
+                        <ChatList chats={sampleChatData} chatId={chatId} onlineUsers={["1", "2"]} />
                     </Grid>
                     <Grid
                         item
