@@ -27,23 +27,23 @@ const Navbar = () => {
 
     // Function to handle the display of Sidebar/Drawer in mobile screens
     const handleMobileSideDrawer = (e) => {
-
+        
     }
 
     // Function to handle the opening of Search Box
     const openSearchBox = (e) => {
-        setIsSearch(true);
+        setIsSearch((prev) => !prev);
 
     }
 
     // Function to handle the opening of Notifications
     const openNotificationBox = (e) => {
-        setIsNotification(true);
+        setIsNotification((prev) => !prev);
     }
 
     // Function to handle the opening of Create new Group Box
     const openCreateNewGroupBox = (e) => {
-        setIsCreateGroup(true);
+        setIsCreateGroup((prev) => !prev);
     }
 
     // Function to handle navigation to Manage groups page

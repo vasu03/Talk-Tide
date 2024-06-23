@@ -16,13 +16,13 @@ const ChatItem = ({
     isOnline,
     newMessageAlert=[],
     index = 0,
-    handleDeleteChatOpen
+    handleDeleteChat
 }) => {
     // JSX to render the ChatItem Page
     return (
         <Link
             to={`/chat/${_id}`}
-            onContextMenu={(e) => handleDeleteChatOpen(e, _id, isGroupChat)}
+            onContextMenu={(e) => handleDeleteChat(e, _id, isGroupChat)}
             className="text-inherit p-1 border-b border-slate-600"
         >
             <div className={`
