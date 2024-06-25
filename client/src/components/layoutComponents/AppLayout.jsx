@@ -1,6 +1,7 @@
 // Importing required modules
 import React from "react";
 import { useParams } from "react-router-dom";
+import toast from "react-hot-toast";
 
 // Importing MUI assets
 import { Grid } from "@mui/material";
@@ -10,7 +11,7 @@ import Navbar from "../sharedComponents/Navbar";
 import WebTitle from "../sharedComponents/WebTitle";
 import ChatList from "../dialogComponents/ChatList";
 
-import { sampleChatData } from "../sharedComponents/sampleChatData.js";
+import { sampleChatData } from "../sharedComponents/sampleData.js";
 
 // Create the AppLayout component (Higher Order component)
 const AppLayout = () => WrappedComponent => {
@@ -21,6 +22,20 @@ const AppLayout = () => WrappedComponent => {
         const params = useParams();
         // Some varibales to handle props for childrens
         const chatId = params.chatId;
+
+        // function to handle the deleting of a Chat => Used on Ctx menu (right click)
+        const handleDeleteChat = async (e, _id, groupChat) => {
+            e.preventDefault();
+
+            try {
+                toast.success("Delete Chat pressed.");
+            } catch (error) {
+                toast.error(error.message);
+            } finally {
+
+            }
+        }
+
         return (
             <>
                 <WebTitle />
@@ -39,7 +54,7 @@ const AppLayout = () => WrappedComponent => {
                         }}
                         height={"100%"}
                         className="bg-gray-900 text-gray-300 border-r border-gray-600" >
-                        <ChatList chats={sampleChatData} chatId={chatId} onlineUsers={["1", "2"]} />
+                        <ChatList chats={sampleChatData} chatId={chatId} handleDeleteChat={handleDeleteChat} />
                     </Grid>
                     <Grid
                         item
