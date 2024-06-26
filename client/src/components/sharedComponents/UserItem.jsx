@@ -1,12 +1,8 @@
 // Importing required modules
 import React, { memo } from "react";
+
+// Importing react icons
 import { BiPlusCircle } from "react-icons/bi";
-
-
-// Importing MUI assets
-
-
-// Importing custom components
 
 
 // Creating the UserItem Page

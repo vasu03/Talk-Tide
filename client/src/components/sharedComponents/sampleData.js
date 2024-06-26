@@ -56,3 +56,48 @@ export const sampeUserData = [
 		_id: "5",
 	},
 ];
+
+
+// Sample Notification Data
+export const sampleNotificationData = [
+	{
+		sender: {
+			avatar: "https://avatar.iran.liara.run/public/boy",
+			username: "john_12",
+			fullName: "John Doe",
+		},	
+		_id: "1",
+	},
+	{
+		sender: {
+			avatar: "https://avatar.iran.liara.run/public/boy",
+			username: "isAlex",
+			fullName: "Alex David",
+		},
+		_id: "2",
+	},
+	{
+		sender: {
+			avatar: "https://avatar.iran.liara.run/public/girl",
+			username: "maria23",
+			fullName: "Maria Jones",
+		},
+		_id: "3",
+	},
+	{
+		sender: {
+			avatar: "https://avatar.iran.liara.run/public/girl",
+			username: "rubina_x34",
+			fullName: "Rubina Seikh",
+		},
+		_id: "4",
+	},
+	{
+		sender: {
+			avatar: "https://avatar.iran.liara.run/public/boy",
+			username: "gayle051",
+			fullName: "Christopher Gayles",
+		},
+		_id: "5",
+	},
+];

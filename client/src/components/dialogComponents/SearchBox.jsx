@@ -1,10 +1,8 @@
 // Importing required modules
 import React, { useState } from "react";
+
+// Importing react icons
 import { BiSearchAlt } from "react-icons/bi";
-
-
-// Importing MUI assets
-
 
 // Importing custom components
 import UserItem from "../sharedComponents/UserItem";
@@ -14,7 +12,7 @@ import { sampeUserData } from "../sharedComponents/sampleData";
 // Creating the SearchBox Page
 const SearchBox = () => {
 	// Some states to handle searching
-	const [search, setSearch] = useState("");
+	const [ search, setSearch ] = useState("");
 	const [ users, setUsers ] = useState(sampeUserData);
 	let isLoadingSendFriendRequest = false;
 
@@ -31,7 +29,7 @@ const SearchBox = () => {
 
 	// JSX to render the SearchBox Page
 	return (
-		<div className="flex flex-col items-center justify-center gap-4 p-2 md:px-0 py-4 w-11/12 md:w-1/2 h-2/3 rounded-lg bg-cyan-300 bg-opacity-20 backdrop-blur-lg z-50 " style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
+		<div className="flex flex-col items-center justify-center gap-4 p-2 md:px-0 py-4 w-11/12 md:w-1/2 h-2/3 rounded-lg bg-cyan-300 bg-opacity-20 backdrop-blur-lg z-49" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
 			<h2 className="text-3xl text-center font-semibold text-white">Find People</h2>
 			{/* Input field for searching users */}
 			<form onSubmit={handleSearch} className="w-full md:w-5/6 flex gap-2">

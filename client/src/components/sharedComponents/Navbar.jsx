@@ -34,16 +34,27 @@ const Navbar = () => {
     const openSearchBox = (e) => {
         setIsSearch((prev) => !prev);
 
+        // close all other dialogs
+        setIsNotification(false);
+        setIsCreateGroup(false);
     }
 
     // Function to handle the opening of Notifications
     const openNotificationBox = (e) => {
         setIsNotification((prev) => !prev);
+
+        // close all other dialogs
+        setIsSearch(false);
+        setIsCreateGroup(false);
     }
 
     // Function to handle the opening of Create new Group Box
     const openCreateNewGroupBox = (e) => {
         setIsCreateGroup((prev) => !prev);
+
+        // close all other dialogs
+        setIsSearch(false);
+        setIsNotification(false);
     }
 
     // Function to handle navigation to Manage groups page
@@ -59,6 +70,13 @@ const Navbar = () => {
     // Function to handle the Logout user
     const handleLogout = async (e) => {
         e.preventDefault();
+    }
+
+    // fucntion to handle closing of all open dialogs at moment
+    const handleClosingOpenDialogs = (e) => {
+        setIsSearch(false);
+        setIsNotification(false);
+        setIsCreateGroup(false);
     }
 
     // JSX to render the component
@@ -88,11 +106,11 @@ const Navbar = () => {
                             <IconBtn title={"Manage Groups"} icon={<BiGroup className="text-teal-100" />} eventListener={navigateToManageGroups} />
                             <IconBtn title={"Logout"} icon={<BiLogOut className="text-teal-100 rotate-180" />} eventListener={handleLogout} />
                         </Box>
-                        <Box sx={{ display: { xs: "block", sm: "none" } }} className="dropdown dropdown-end">
-                            <div className="border-0">
-                                <IconBtn title={"Open Menu"} icon={<BiDotsVerticalRounded className="text-gray-400" />} />
+                        <Box sx={{ display: { xs: "block", sm: "none" } }} className="dropdown dropdown-end" >
+                            <div className="border-0" onClick={handleClosingOpenDialogs}>
+                                <IconBtn  title={"Open Menu"} icon={<BiDotsVerticalRounded className="text-gray-400" />} />
                             </div>
-                            <Box className="dropdown-content z-49 menu p-2 shadow bg-gray-900 rounded-md w-44">
+                            <Box className="dropdown-content menu p-2 shadow bg-gray-900 rounded-md w-44" sx={{zIndex: 100}}>
                                 <IconBtn title={"Profile"} icon={<BiUserCircle className="text-teal-100" />} text={"Profile"} eventListener={navigateToProfile} />
                                 <IconBtn title={"Notifications"} icon={<BiBell className="text-teal-100" />} text={"Notifications"} eventListener={openNotificationBox} />
                                 <IconBtn title={"Search"} icon={<BiSearchAlt className="text-teal-100" />} text={"Search"} eventListener={openSearchBox} />
