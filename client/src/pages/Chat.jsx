@@ -28,7 +28,7 @@ const Chat = () => {
 
 	// JSX to render the Chat Page
 	return (
-		<Fragment className="">
+		<Fragment>
 			{/* Chat Header */}
 			<div className="flex items-center justify-start mx-auto p-4 border-b border-gray-700" style={{ width: "98%", height: "9%" }}>
 				<div className="flex items-center justify-center text-lg gap-3">

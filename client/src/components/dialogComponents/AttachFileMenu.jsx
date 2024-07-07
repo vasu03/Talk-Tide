@@ -7,7 +7,7 @@ import React from 'react';
 const AttachFileMenu = ({ anchorOn }) => {
     // JSX to render the component
     return (
-        <Menu anchorEl={anchorOn}>
+        <Menu anchorEl={anchorOn} open={false}>
             <div className="w-20 h-20 bg-slate-700">
                 Files
             </div>
