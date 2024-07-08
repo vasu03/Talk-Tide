@@ -10,7 +10,6 @@ import { Grid } from "@mui/material";
 import Navbar from "../sharedComponents/Navbar";
 import WebTitle from "../sharedComponents/WebTitle";
 import ChatList from "../dialogComponents/ChatList";
-
 import { sampleChatData } from "../sharedComponents/sampleData.js";
 
 // Create the AppLayout component (Higher Order component)
@@ -56,6 +55,8 @@ const AppLayout = () => WrappedComponent => {
                         className="bg-gray-900 text-gray-300 border-r border-gray-600" >
                         <ChatList chats={sampleChatData} chatId={chatId} handleDeleteChat={handleDeleteChat} />
                     </Grid>
+
+                    {/* The Grid that contains main content :: Home/Chatting */}
                     <Grid
                         item
                         xs={12}
@@ -73,3 +74,12 @@ const AppLayout = () => WrappedComponent => {
 
 // Exporting the component
 export default AppLayout;
+
+
+
+// // MUI Screen sizes // //
+// xs:: extra-small: 0px /+
+// sm:: small : 600px /+
+// md:: medium : 900px /+
+// lg:: large : 1200px /+
+// xl:: extra large : 1536px /+ 

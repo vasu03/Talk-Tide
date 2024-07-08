@@ -170,11 +170,3 @@ const IconBtn = ({ title, icon, eventListener, text }) => {
 
 // Exporting the component
 export default Navbar;
-
-
-// // MUI Screen sizes // //
-// xs:: extra-small: 0px /+
-// sm:: small : 600px /+
-// md:: medium : 900px /+
-// lg:: large : 1200px /+
-// xl:: extra large : 1536px /+ 

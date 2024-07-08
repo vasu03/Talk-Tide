@@ -19,7 +19,7 @@ const Notifications = () => {
 
 	// JSX to render the Notifications Page
 	return (
-		<div className="flex flex-col items-center justify-center gap-4 p-2 md:px-0 py-4 w-11/12 md:w-1/2 h-2/3 rounded-lg bg-cyan-300 bg-opacity-20 backdrop-blur-lg z-49 " style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
+		<div className="flex flex-col items-center justify-center gap-4 p-2 md:px-0 py-4 w-11/12 md:w-1/2 h-2/3 rounded-lg bg-cyan-300 bg-opacity-20 backdrop-blur-lg" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", zIndex: 1000 }}>
 			<h2 className="text-3xl text-center font-semibold text-white">Notifications</h2>
 			{/* List of all the current Notifications */}
 			<div className="w-full md:w-5/6 h-5/6 overflow-y-scroll relative">

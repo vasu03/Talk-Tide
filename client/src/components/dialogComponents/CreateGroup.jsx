@@ -45,7 +45,7 @@ const CreateGroup = () => {
 
 	// JSX to render the CreateGroup Page
 	return (
-		<div className="flex flex-col items-center justify-center gap-4 p-2 md:px-0 py-4 w-11/12 md:w-1/2 h-2/3 rounded-lg bg-cyan-300 bg-opacity-20 backdrop-blur-lg z-49 " style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
+		<div className="flex flex-col items-center justify-center gap-4 p-2 md:px-0 py-4 w-11/12 md:w-1/2 h-2/3 rounded-lg bg-cyan-300 bg-opacity-20 backdrop-blur-lg" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", zIndex: 1000 }}>
 			<h2 className="text-3xl text-center font-semibold text-white">New Group</h2>
 			<input type="text" value={groupName} onChange={(e) => setGroupName(e.target.value)} placeholder="Group Name" className="bg-transparent border border-slate-300 rounded-lg text-white w-full md:w-5/6 p-2 outline-none" />
 			{/* Input field for searching users */}

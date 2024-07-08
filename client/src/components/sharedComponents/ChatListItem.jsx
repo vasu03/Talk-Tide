@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 import { Stack } from "@mui/material";
 
 
-// Creating the ChatItem Page
-const ChatItem = ({
+// Creating the ChatListItem component
+const ChatLsitItem = ({
     avatar = [],
     name,
     _id,
@@ -18,7 +18,7 @@ const ChatItem = ({
     index = 0,
     handleDeleteChat
 }) => {
-    // JSX to render the ChatItem Page
+    // JSX to render the ChatListItem component
     return (
         <Link
             to={`/chat/${_id}`}
@@ -57,4 +57,4 @@ const ChatItem = ({
 };
 
 // Exporting the Page
-export default memo(ChatItem);
+export default memo(ChatLsitItem);

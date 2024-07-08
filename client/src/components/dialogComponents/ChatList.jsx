@@ -5,7 +5,7 @@ import React from "react";
 import { Stack } from "@mui/material";
 
 // Importing custom components
-import ChatItem from "../sharedComponents/ChatItem";
+import ChatListItem from "../sharedComponents/ChatListItem";
 
 
 // Creating the ChatList Page with some props
@@ -28,7 +28,7 @@ const ChatList = ({
                     );
                     const isOnline = members?.some((member) => onlineUsers.includes(_id));
                     return (
-                        <ChatItem
+                        <ChatListItem
                             key={_id}
                             index={index}
                             newMessageAlert={newMessageAlert}
