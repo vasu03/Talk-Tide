@@ -9,7 +9,7 @@ import { Grid } from "@mui/material";
 // Importing our custom component
 import Navbar from "../sharedComponents/Navbar";
 import WebTitle from "../sharedComponents/WebTitle";
-import ChatList from "../dialogComponents/ChatList";
+import ChatList from "../specificComponents/ChatList";
 import { sampleChatData } from "../sharedComponents/sampleData.js";
 
 // Create the AppLayout component (Higher Order component)

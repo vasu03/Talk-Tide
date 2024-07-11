@@ -13,10 +13,10 @@ import { sampeUserData } from "../sharedComponents/sampleData";
 // Creating the CreateGroup Page
 const CreateGroup = () => {
 	// Some states to handle Creating of new Group
-	const [ groupName, setGroupName ] = useState("");
-	const [ search, setSearch ] = useState("");
-	const [ users, setUsers ] = useState(sampeUserData);
-	const [ selectedMembers, setSelectedMembers ] = useState([]);
+	const [groupName, setGroupName] = useState("");
+	const [search, setSearch] = useState("");
+	const [users, setUsers] = useState(sampeUserData);
+	const [selectedMembers, setSelectedMembers] = useState([]);
 
 	// Some variable to handle creating of group
 	let isLoadingCreateGroup = false;
@@ -30,13 +30,13 @@ const CreateGroup = () => {
 	const handleSelectingGroupMembers = async (_id) => {
 		// set the member into array on clicking add, only if its not already selected
 		// If already selected then again clicking will remove it
-		setSelectedMembers((prev) => prev.includes(_id) ? prev.filter((key) => key !== _id) : [ ...prev, _id ]);
+		setSelectedMembers((prev) => prev.includes(_id) ? prev.filter((key) => key !== _id) : [...prev, _id]);
 	}
 
 	// function to handle the creation of group
 	const handleCreateGroup = async (e) => {
 		e.preventDefault();
-	} 
+	}
 
 	// const function to handle close create group box
 	const handleCloseNewGroupBox = async () => {
@@ -67,14 +67,14 @@ const CreateGroup = () => {
 				}
 			</div>
 			{/* Buttons to create a group */}
-            <div className="flex items-center justify-center gap-2 text-white">
-                <button className="flex items-center justify-center bg-red-300 p-2 rounded-lg bg-opacity-50 hover:bg-opacity-65" type="submit" onClick={handleCloseNewGroupBox} >
-                    Cancel
-                </button>
-                <button className="flex items-center justify-center bg-green-300 p-2 rounded-lg bg-opacity-50 hover:bg-opacity-65" type="submit" onClick={handleCreateGroup} >
-                    Create
-                </button>
-            </div>
+			<div className="flex items-center justify-center gap-2 text-white">
+				<button className="flex items-center justify-center bg-red-300 p-2 rounded-lg bg-opacity-50 hover:bg-opacity-65" type="submit" onClick={handleCloseNewGroupBox} >
+					Cancel
+				</button>
+				<button className="flex items-center justify-center bg-green-300 p-2 rounded-lg bg-opacity-50 hover:bg-opacity-65" type="submit" onClick={handleCreateGroup} >
+					Create
+				</button>
+			</div>
 		</div>
 	);
 };

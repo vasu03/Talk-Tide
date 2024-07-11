@@ -55,6 +55,48 @@ export const sampeUserData = [
 		fullName: "Christopher Gayles",
 		_id: "5",
 	},
+	{
+		avatar: "https://avatar.iran.liara.run/public/boy",
+		username: "evans",
+		fullName: "Chris Evans",
+		_id: "6",
+	},
+	{
+		avatar: "https://avatar.iran.liara.run/public/boy",
+		username: "tony32",
+		fullName: "Tony Stark",
+		_id: "7",
+	},
+	{
+		avatar: "https://avatar.iran.liara.run/public/boy",
+		username: "thor12",
+		fullName: "Thor Oddinson",
+		_id: "8",
+	},
+	{
+		avatar: "https://avatar.iran.liara.run/public/girl",
+		username: "natasha",
+		fullName: "Natasha Romanoff",
+		_id: "9",
+	},
+	{
+		avatar: "https://avatar.iran.liara.run/public/girl",
+		username: "witch04",
+		fullName: "Scarlett Witch",
+		_id: "10",
+	},
+	{
+		avatar: "https://avatar.iran.liara.run/public/boy",
+		username: "spidy",
+		fullName: "Peter Parker",
+		_id: "11",
+	},
+	{
+		avatar: "https://avatar.iran.liara.run/public/Boy",
+		username: "hawkeye",
+		fullName: "Clinton Barton",
+		_id: "12",
+	},
 ];
 
 // Sample Notification Data

@@ -6,9 +6,9 @@ import { useNavigate } from "react-router-dom";
 import { Box, AppBar, Toolbar, Tooltip, IconButton } from "@mui/material";
 
 // Importing custom components
-const SearchBox = lazy(() => import("../dialogComponents/SearchBox"));
-const Notifications = lazy(() => import("../dialogComponents/Notifications"));
-const CreateGroup = lazy(() => import("../dialogComponents/CreateGroup"));
+const SearchBox = lazy(() => import("../specificComponents/SearchBox"));
+const Notifications = lazy(() => import("../specificComponents/Notifications"));
+const CreateGroup = lazy(() => import("../specificComponents/CreateGroup"));
 
 // Importing react-icons
 import { BiMenu, BiGroup, BiLogOut, BiSearchAlt, BiPlusCircle, BiDotsVerticalRounded, BiUserCircle, BiBell } from "react-icons/bi";
