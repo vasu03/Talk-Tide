@@ -21,6 +21,69 @@ export const sampleChatData = [
 		isGroupChat: false,
 		members: ["1", "2"],
 	},
+	{
+		avatar: [""],
+		name: "Rubina Seikh",
+		_id: "4",
+		isGroupChat: false,
+		members: ["1", "2"],
+	},
+	{
+		avatar: [""],
+		name: "Christopher Gayles",
+		_id: "5",
+		isGroupChat: false,
+		members: ["1", "2"],
+	},
+	{
+		avatar: [""],
+		name: "Chris Evans",
+		_id: "6",
+		isGroupChat: false,
+		members: ["1", "2"],
+	},
+	{
+		avatar: [""],
+		name: "Tony Stark",
+		_id: "7",
+		isGroupChat: false,
+		members: ["1", "2"],
+	},
+	{
+		avatar: [""],
+		name: "Thor Oddinson",
+		_id: "8",
+		isGroupChat: false,
+		members: ["1", "2"],
+	},
+	{
+		avatar: [""],
+		name: "Natasha Romanoff",
+		_id: "9",
+		isGroupChat: false,
+		members: ["1", "2"],
+	},
+	{
+		avatar: [""],
+		name: "Scarlett Witch",
+		_id: "10",
+		isGroupChat: false,
+		members: ["1", "2"],
+	},
+	{
+		avatar: [""],
+		name: "Peter Parker",
+		_id: "11",
+		isGroupChat: false,
+		members: ["1", "2"],
+	},
+	{
+		avatar: [""],
+		name: "Clint Barton",
+		_id: "12",
+		isGroupChat: false,
+		members: ["1", "2"],
+	},
 ];
 
 // Sample User Data
@@ -94,7 +157,7 @@ export const sampeUserData = [
 	{
 		avatar: "https://avatar.iran.liara.run/public/Boy",
 		username: "hawkeye",
-		fullName: "Clinton Barton",
+		fullName: "Clint Barton",
 		_id: "12",
 	},
 ];

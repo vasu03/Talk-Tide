@@ -19,7 +19,7 @@ const ChatList = ({
 }) => {
     // JSX to render the ChatItem Page
     return (
-        <Stack width={width} direction={"column"} >
+        <Stack width={width} height={"100%"} paddingInline={{ xs: "0", sm: ".5rem", md: "1rem" }} direction={"column"} className="overflow-y-auto" >
             {
                 chats?.map((data, index) => {
                     const { avatar, _id, name, groupChat, members } = data;
